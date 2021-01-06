@@ -47,7 +47,7 @@ Description
 int main(int argc, char *argv[])
 {
     timeSelector::addOptions();
-    argList::noBanner();
+    writeInfoHeader = false;
     argList::validOptions.insert("awayFromPatch", "");
     argList::validOptions.insert("onlyOrigins", "");
     argList::validArgs.append("patchName");

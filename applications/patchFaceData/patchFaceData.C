@@ -142,7 +142,7 @@ void getPatchFaceData
 int main(int argc, char *argv[])
 {
     timeSelector::addOptions();
-    argList::noBanner();
+    writeInfoHeader = false;
     argList::validArgs.append("patchName");
     argList::addOption("patchNames", "patchNames");
     argList::addOption("field", "word", "field to extract patch values");

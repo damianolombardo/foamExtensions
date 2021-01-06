@@ -216,7 +216,7 @@ int main(int argc, char *argv[])
     std::cout << "Read " << values.size() << " values from stdin."<< std::endl;
 
     timeSelector::addOptions();
-    argList::noBanner();
+    writeInfoHeader = false;
     argList::validArgs.append("fieldName");
     argList::validArgs.append("patchName");
     argList::addOption("patchNames", "patchNames");
