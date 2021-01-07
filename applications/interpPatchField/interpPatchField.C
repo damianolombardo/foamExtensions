@@ -90,7 +90,7 @@ float offset
 int main(int argc, char *argv[])
 {
     timeSelector::addOptions();
-    argList::noBanner();
+    writeInfoHeader = false;
     argList::validArgs.append("fieldName");
     argList::validArgs.append("patchName");
     argList::validArgs.append("interpTime");
@@ -121,8 +121,8 @@ int main(int argc, char *argv[])
         )
     );
 
-    word fieldName(args.additionalArgs()[0]);
-    word patchName(args.additionalArgs()[1]);
+    word fieldName(args.argRead<word>(1));
+    word patchName(args.argRead<word>(2));
     float interpTime( atof(argv[3]) );
     float offset = 0.0;
     args.optionReadIfPresent("offset", offset);
